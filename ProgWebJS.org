@@ -1,0 +1,274 @@
+# -*- mode:org; fill-column:79; -*-
+
+#+title:Programming for the Web with JavaScript
+#+subtitle:PennX SD4x:
+#+subtitle: Learn how to develop dynamic, interactive, and data-driven web apps using JavaScript.
+#+date:2019-6-25 14:47
+PennX SD4x: Learn how to develop dynamic, interactive, and data-driven web apps
+using JavaScript.
+* Introduction
+:PROPERTIES:
+:unnumbered: t
+:END:
+** About this Course
+- CS Essentials for Software Development "Learn to design efficient high
+  quality software"
+  - Software Development Fundamentals
+  - Data Structures and Software Design
+  - Algorithm Design and Analysis
+  - Programming for the Web with JavaScript
+- Length: 4 weeks
+- Effort: 6-8 hours per week
+- Level: Intermediate
+
+
+JavaScript is the programming language of the World Wide Web.
+
+As a professional web software developer, you will not only need to know how to
+program in this simple yet powerful language, but you will need to understand
+the fundamentals of how data is exchanged on the World Wide Web (WWW) and what
+tools and frameworks are available to you for creating robust, interactive web
+applications.
+
+This course, part of the {{{cite(CS Essentials for Software Development
+Professional Certificate)}}} program, provides an introduction to modern web
+development using JavaScript.  In addition to exploring the basics of web page
+creation using HTML and CSS, you will learn advanced web page layout and
+responsive design tools such as Bootstrap.  You will also learn how browsers
+represent a web page data using the Document Object Model (DOM) and how to
+develop dynamic, interactive web pages using JavaScript in the browser.  Beyond
+fundamental JavaScript syntax and advanced language features such as callbacks,
+events, and asynchronous programming, you will work with jQuery, which provides
+functionality for simplified DOM manipulation and event handling.
+
+This course will also introduce you to modern web frameworks and
+component-based libraries such as React.js for efficiently developing modular
+web page components, and D3.js for creating data-driven documents.  We will
+also teach you how to represent and exchange data using JavaScript Object
+Notation (JSON), and how to access RESTful APIs on the web.
+
+Server-side JavaScript is becoming more prevalent in the industry, with web
+frameworks such as Node.js and Express making it simple to create and deploy
+complex, data-driven web applications.  This course will prepare you to use
+such frameworks and show you how to integrate them with NoSQL databases such as
+MongoDB.
+
+** What You Will Learn
+- The basics of how the World Wide Web allows browsers to send and retrieve web
+  content
+
+- Web browser internals, the Document Object Model (DOM), and jQuery
+
+- How to create dynamic, interactive web pages using JavaScript
+
+- Techniques for creating data-driven websites using modern web technologies
+
+- Client-side JavaScript libraries and frameworks
+
+- Server-side JavaScript application architecture, middleware, HTTP, and
+  RESTful API design
+
+** Course Instructors
+
+*** Chris Murphy
+- Associate Professor of Practice, School of Engineering and Applied Science
+  University of Pennsylvania
+
+- Other Courses taught
+  - Data Structures and Software Design
+
+
+Chris is an Associate Professor of Practice at the School of Engineering and
+Applied Science at the University of Pennsylvania.  He received his B.S. in
+Computer Engineering from Boston University in 1995, and his M.S. and Ph.D. in
+Computer Science in 2006 and 2010, respectively, from Columbia University.  His
+research interests include computer science education, software testing, and
+open source software development.  Prior to his graduate studies, Chris was a
+professional software developer for companies in the United States and United
+Kingdom.
+
+*** Swapneel Sheth
+- Senior Lecturer, Computer and Information Science University of Pennsylvania
+
+
+Swapneel Sheth is a Lecturer at the School of Engineering and Applied Science
+at the University of Pennsylvania.  He received his B.E. in Computer
+Engineering from Sarder Patel College of Engineering, Mumbai University in
+2006, and his M.S. and Ph.D. in Computer Science from Columbia University in
+2007 and 2013 respectively.  His research interests include Computer Science
+Education, Software Engineering, and Privacy.
+
+** Course Syllabus
+- Week 1---Web Programming Basics ::
+
+     Web Programming Basics: how web browsers and servers communicate using
+     HTTP; creating static web content with HTML and CSS
+
+- Week 2---Using JavaScript to Create Dynamic Web Pages ::
+
+     Using JavaScript to Create Dynamic Web Pages: basics of the JavaScript
+     programming language; accessing HTML elements from embedded JavaScript
+     using the DOM and jQuery
+
+- Week 3---Client-Side Frameworks for Developing Modular Web Page Components ::
+
+     Client-Side Frameworks for Developing Modular Web Page Components:
+     component-based web app development using React; creating data-driven
+     documents with D3.js
+
+- Week 4---Building Scalable Web Apps with Server-Side JavaScript ::
+
+     Building Scalable Web Apps with Server-Side JavaScript: generating dynamic
+     content on the server using Node.js and Express; storing and retrieving
+     data in MongoDB; developing an API for the web
+
+** Getting Started
+
+*** Welcome from the SD4x Team
+
+*** Welcome from the Instructors
+Dear Learners,
+
+We are so excited to welcome you to SD4x Programming for the Web with
+JavaScript, the fourth and final course of the CS Essentials for Software
+Development series.  During our time teaching software engineering and web
+programming at Penn Engineering, we have seen rapid and exciting developments
+in terms of the tools, platforms, libraries, and technologies that can be used
+to create interactive, data-driven web applications using JavaScript.  We have
+designed this course to provide you with the foundation that you will need to
+enter and keep up with this fast-moving field, and our entire team looks
+forward to helping you build up your skill set in web programming.
+* Week 1
+** Introduction to Week 1
+This week we'll start with the basics of web programming by looking at how the
+Worldwide Web works.  We'll see how a browser communicates with a server using
+HTTP.  And we'll explore the fundamentals of webpage creation using HTML and
+CSS.
+** Introduction to the Internet and the World Wide Web - Video 1.1
+- What is the Internet? ::
+
+     Network of machines (servers, clients, routers, switches, etc) connected
+     by media (fiber, wifi, etc.) that allows communication among devices.
+
+     Graph: nodes (devices), edges (connections)
+
+- What is the World-Wide Web? ::
+
+     World-Wide-Web is not the Internet.  It is an application that operates
+     over the Internet.  The Internet provides an infrastructure; the WWW
+     utilizes the infrastructure to run an application on which users connect
+     and share data.
+
+     Other applications use the Internet as well, i.e. email.
+
+     The WWW application combines many protocols to allow communication and
+     transfer data between devices.
+
+     The Web is composed of documents that are logically linked to each other.
+
+     The Web follows similar network structure as the Internet.  Web pages link
+     to other web pages, forming a graph.  Nodes represent an individual
+     document or resource.  Edges represent a link from one document or
+     resource to another (directed edges).
+
+- Web Page Addresses ::
+
+  - Uniform Resource Identifier (URI): alphanumeric string of characters
+    used to uniquely identify a web page or resource.
+
+  - Uniform Resource Locator (URL): type of URI that specifies the location
+    on the WWW and the mechanism (protocol) for retrieving it.
+
+  - Example URL: =http://www.example.com/home/index.html?a=12&b=34=
+
+    - =http:= is the protocol.
+
+    - =host name:= =www.example.com/=
+
+    - =domain name:= =example.com=
+
+    - =file path:= =index.html=
+
+    - =query parameters:= =?a=12&b=34=
+
+  - Content Categories ::
+
+    - Static: same for all users and at all times; appearance may vary based
+      upon browser, but content is the same.  Technologies include HTML, CSS.
+
+    - Dynamic: programmatically generated depending on the user, context,
+      configuration, arguments, etc.  Technology is Javascript.
+
+  - Looking Ahead ::
+
+    - How does a browser request a web page or resource?  What
+      does it send?  What does it receive?
+
+    - Once the content is received, how does a browser display it?
+
+    - How can you write programs to generate dynamic content in the browser?
+** How a Web Browser Works
+- What is a Web browser? ::
+
+     Software that is used to access and display Web content, and to navigate
+     across the Web.
+
+- Main components of a Web browser ::
+
+  - Rendering engine (HTML/CSS): responsible for static content
+    presentation, formatting, and layout.
+
+  - JavaScript engine: responsible for creating and modifying dynamic content
+    and appearance.
+
+- How a Web browser works ::
+
+     Utilizes Hypertext Transfer Protocol (HTTP) to transfer documents.
+
+  - Client-Server Model
+
+    Client <---> Server
+
+    Client sends a =request= to a server
+
+    Server sends back a =response= to the requesting client
+
+- HTTP Overview ::
+
+  - HTTP is a plain-text, human-readable protocol used for
+    exchanging data on the Web
+
+  - Initially developed by Tim Berniers-Lee at CERN in 1989
+
+  - Based on client-server model
+
+    - Client sends a =request= for resources, possibly including information
+      about the client
+
+    - Server sends a =response=, including header (status information) and
+      requested resource
+
+* Concept Index
+:PROPERTIES:
+:unnumbered: t
+:index:    cp
+:END:
+* Export Settings                                                  :noexport:
+** Texinfo Export Settings
+#+texinfo_filename:progwebjs.info
+#+texinfo_class: info
+#+texinfo_header:
+#+texinfo_post_header:
+#+texinfo_dir_category:JavaScript
+#+texinfo_dir_title:ProgWebJS
+#+texinfo_dir_desc:Programming for the web with JavaScript
+#+texinfo_printed_title:Programming for the Web with JavaScript
+
+* Macro Definitions                                                :noexport:
+#+macro:heading @@texinfo:@heading @@$1
+#+macro:subheading @@texinfo:@subheading @@$
+#+macro:cite @@texinfo:@cite{@@$1@@texinfo:}@@
+* Local Variables                                                  :noexport:
+# Local Variables:
+# time-stamp-pattern:"8/^\\#\\+date:%:y-%:m-%:d %02H:%02M$"
+# End:
