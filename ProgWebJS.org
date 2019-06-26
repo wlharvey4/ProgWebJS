@@ -3,7 +3,7 @@
 #+title:Programming for the Web with JavaScript
 #+subtitle:PennX SD4x:
 #+subtitle: Learn how to develop dynamic, interactive, and data-driven web apps using JavaScript.
-#+date:2019-6-25 14:47
+#+date:2019-6-26 14:53
 PennX SD4x: Learn how to develop dynamic, interactive, and data-driven web apps
 using JavaScript.
 * Introduction
@@ -145,20 +145,29 @@ Worldwide Web works.  We'll see how a browser communicates with a server using
 HTTP.  And we'll explore the fundamentals of webpage creation using HTML and
 CSS.
 ** Introduction to the Internet and the World Wide Web - Video 1.1
+#+cindex:Internet, what it is
 - What is the Internet? ::
 
+     #+cindex:network of devices
+     #+cindex:media
      Network of machines (servers, clients, routers, switches, etc) connected
      by media (fiber, wifi, etc.) that allows communication among devices.
 
+     #+cindex:graph
+     #+cindex:nodes
+     #+cindex:edges
      Graph: nodes (devices), edges (connections)
 
+     #+cindex:World Wide Web, what it is
 - What is the World-Wide Web? ::
 
+     #+cindex:infrastructure
      World-Wide-Web is not the Internet.  It is an application that operates
      over the Internet.  The Internet provides an infrastructure; the WWW
      utilizes the infrastructure to run an application on which users connect
      and share data.
 
+     #+cindex:email
      Other applications use the Internet as well, i.e. email.
 
      The WWW application combines many protocols to allow communication and
@@ -166,16 +175,26 @@ CSS.
 
      The Web is composed of documents that are logically linked to each other.
 
+     #+cindex:network structure
+     #+cindex:nodes
+     #+cindex:edges
      The Web follows similar network structure as the Internet.  Web pages link
      to other web pages, forming a graph.  Nodes represent an individual
      document or resource.  Edges represent a link from one document or
      resource to another (directed edges).
 
+     #+cindex:Web addresses
+     #+cindex:address, Web
 - Web Page Addresses ::
 
+     #+cindex:Uniform Resource Identifier (URI)
+     #+cindex:URI
   - Uniform Resource Identifier (URI): alphanumeric string of characters
     used to uniquely identify a web page or resource.
 
+    #+cindex:Uniform Resource Locator (URL)
+    #+cindex:URL
+    #+cindex:protocol
   - Uniform Resource Locator (URL): type of URI that specifies the location
     on the WWW and the mechanism (protocol) for retrieving it.
 
@@ -193,9 +212,11 @@ CSS.
 
   - Content Categories ::
 
+       #+cindex:static content
     - Static: same for all users and at all times; appearance may vary based
       upon browser, but content is the same.  Technologies include HTML, CSS.
 
+      #+cindex:dynamic content
     - Dynamic: programmatically generated depending on the user, context,
       configuration, arguments, etc.  Technology is Javascript.
 
@@ -208,45 +229,130 @@ CSS.
 
     - How can you write programs to generate dynamic content in the browser?
 ** How a Web Browser Works
+#+cindex:web browser, what it is
 - What is a Web browser? ::
 
      Software that is used to access and display Web content, and to navigate
      across the Web.
 
+     #+cindex:web browser components
 - Main components of a Web browser ::
 
+     #+cindex:engine,rendering
+     #+cindex:static content
   - Rendering engine (HTML/CSS): responsible for static content
     presentation, formatting, and layout.
 
+    #+cindex:engine, JavaScript
+    #+cindex:dynamic content
   - JavaScript engine: responsible for creating and modifying dynamic content
     and appearance.
 
 - How a Web browser works ::
 
+     #+cindex:HTTP
      Utilizes Hypertext Transfer Protocol (HTTP) to transfer documents.
 
+     #+cindex:client-server model
   - Client-Server Model
 
     Client <---> Server
 
+    #+cindex:request
     Client sends a =request= to a server
 
+    #+cindex:response
     Server sends back a =response= to the requesting client
 
+    #+cindex:HTTP overview
 - HTTP Overview ::
 
+                   #+cindex:protocol
   - HTTP is a plain-text, human-readable protocol used for
     exchanging data on the Web
 
+    #+cindex:Berniers-Lee, Tim
   - Initially developed by Tim Berniers-Lee at CERN in 1989
 
+    #+cindex:client-server model
   - Based on client-server model
 
+    #+cindex:request
     - Client sends a =request= for resources, possibly including information
       about the client
 
+      #+cindex:response
     - Server sends a =response=, including header (status information) and
-      requested resource
+      requested resource configuration, arguments, etc.  Technology is
+      Javascript
+
+- Anatomy of an HTTP Request ::
+
+  - Verb followed by Argument
+
+    - =GET= : retrieve resource
+
+    - =HEAD= : retrieve only headers
+
+    - =POST= : create resource
+
+  - Protocol (usually HTTP/1.1)
+
+  - Optionally other information
+
+  - Example HTTP Request
+
+    #+begin_example
+    GET /examples/index.html HTTP/1.1	# REQUEST line: VERB ARGUMENT (URI) HTTP-VERSION
+    Host: xxx.edx.org			# REQUEST HEADERS
+    User-Agent: Mozilla/4.0
+    Accept-Language: en-us
+    Content-Length: 9
+						# Mandatory blank line
+    a=12&b=34				# REQUEST MESSAGE BODY
+    #+end_example
+
+- Anatomy of an HTTP Response ::
+
+  - Protocol and Status Code
+
+    - 1XX - information only
+
+    - 2XX - Sucess
+
+    - 3XX - Client redirect
+
+    - 4XX - Client error
+
+    - 5XX - Server error
+
+  - Most common status codes
+
+    - 200 OK - request succeeded, resulting resource will be included in
+      message body
+
+    - 404 NOT FOUND - requested resource does not exist
+
+    - 500 SERVER ERROR - Error on the server side in processing request
+
+  - Header Information re: response and server
+
+  - Blank line
+
+  - Response Body - resource that was requested
+
+    #+begin_example
+    HTTP/1.1 200 OK			# RESPONSE LINE
+    Date: <date>			# RESPONSE HEADERS
+    Server: Apache/1.4
+    Last-Modified: <date>
+    Connection: close
+    Content-Type: text/html
+    Content-Length: 228
+					# Mandatory blank line
+    <!DOCTYPE html><html><head>...	# RESPONSE BODY (Resource)
+    #+end_example
+
 
 * Concept Index
 :PROPERTIES:
