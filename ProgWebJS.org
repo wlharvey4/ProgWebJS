@@ -3,7 +3,7 @@
 #+title:Programming for the Web with JavaScript
 #+subtitle:PennX SD4x:
 #+subtitle: Learn how to develop dynamic, interactive, and data-driven web apps using JavaScript.
-#+date:2019-6-26 14:53
+#+date:2019-6-26 15:19
 PennX SD4x: Learn how to develop dynamic, interactive, and data-driven web apps
 using JavaScript.
 * Introduction
@@ -352,7 +352,88 @@ CSS.
 					# Mandatory blank line
     <!DOCTYPE html><html><head>...	# RESPONSE BODY (Resource)
     #+end_example
+** Introduction to HTML
+- Hypertext Markup Language ::
 
+     standard used to describe format and structure with which content should
+     be displayed on a web page
+
+- Elements ::
+
+              Document contains elements
+
+- Tag ::
+
+      Each element generally includes a start tag, some content, and an end
+      configuration, arguments, etc.  Technology is Javascripttag.
+
+- Plain Text ::
+
+                HTML is a plain-text, human-readable language that is used for
+                representing content on the Web
+
+- Structure ::
+
+               HTML specifies how to structure the data, but not how to display
+               it.
+
+- Display ::
+
+             The browser chooses how to display the content
+
+- Example ::
+
+             #+begin_example
+             <!DOCTYPE html>
+             <html>
+             	<head>
+                		<title>
+                                Hello
+                            </title>
+                	</head>
+                    <body>
+                    	Hello, World!
+                    </body>
+             </html>
+             #+end_example
+
+*** Important HTML Tags
+
+**** <!DOCTYPE>
+NOT a tag, but a DECLARATION to the web browser of what version of html the
+following document uses.  Must be the first line of a document.
+
+- =<!DOCTYPE html>= declares type HTML5
+
+**** <html>
+After the declaration, HTML pages must start with the =<html>= tag.
+
+- Root element :: Often referred to as the /root element/ because it can be
+                  considered as the root of the tree-like structure of elements
+                  in an HTML page.
+
+**** <head>
+Contains information about the document (NOT the content)
+
+- =<title>= :: title displayed in the browser's title bar
+- =<link>= :: used to add CSS stylesheets and icons to the page
+- =<meta>= :: used to specify metadata like page descriptions and keywords
+- =<script>= :: used to add JavaScript code to the page
+
+**** <body>
+Appears directly beneath the =<head>= element; contains all web page content
+(images, text, etc.).  Usually a single element to a document.
+
+*** How HTTP and HTML are Related
+When a browser makes a request for a document(e.g., ~hello.html~), the HTML
+will be returned in the body of the response and displayed in the browser.
+** Environment Setup
+1. Text Editor
+2. Create new text file
+3. Write HTML in text file
+4. Save document
+5. Open local file in browser
+6. View HTML source in the browser
 
 * Concept Index
 :PROPERTIES:
