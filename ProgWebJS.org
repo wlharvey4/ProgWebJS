@@ -3,7 +3,7 @@
 #+title:Programming for the Web with JavaScript
 #+subtitle:PennX SD4x:
 #+subtitle: Learn how to develop dynamic, interactive, and data-driven web apps using JavaScript.
-#+date:2019-6-26 15:19
+#+date:2019-6-27 14:15
 PennX SD4x: Learn how to develop dynamic, interactive, and data-driven web apps
 using JavaScript.
 * Introduction
@@ -235,7 +235,7 @@ CSS.
      Software that is used to access and display Web content, and to navigate
      across the Web.
 
-     #+cindex:web browser components
+  #+cindex:web browser components
 - Main components of a Web browser ::
 
      #+cindex:engine,rendering
@@ -253,7 +253,7 @@ CSS.
      #+cindex:HTTP
      Utilizes Hypertext Transfer Protocol (HTTP) to transfer documents.
 
-     #+cindex:client-server model
+    #+cindex:client-server model
   - Client-Server Model
 
     Client <---> Server
@@ -267,7 +267,7 @@ CSS.
     #+cindex:HTTP overview
 - HTTP Overview ::
 
-                   #+cindex:protocol
+    #+cindex:protocol
   - HTTP is a plain-text, human-readable protocol used for
     exchanging data on the Web
 
@@ -286,20 +286,29 @@ CSS.
       requested resource configuration, arguments, etc.  Technology is
       Javascript
 
+  #+cindex:request
 - Anatomy of an HTTP Request ::
 
+    #+cindex:verb
+    #+cindex:argument
   - Verb followed by Argument
 
+      #+cindex:GET
     - =GET= : retrieve resource
 
+      #+cindex:HEAD
     - =HEAD= : retrieve only headers
 
+      #+cindex:POST
     - =POST= : create resource
 
+    #+cindex:protocol
+    #+cindex:HTTP/1.1 protocol
   - Protocol (usually HTTP/1.1)
 
   - Optionally other information
 
+    #+cindex:example HTTP request
   - Example HTTP Request
 
     #+begin_example
@@ -312,34 +321,54 @@ CSS.
     a=12&b=34				# REQUEST MESSAGE BODY
     #+end_example
 
+  #+cindex:respone
 - Anatomy of an HTTP Response ::
 
+    #+cindex:protocol
+    #+cindex:status code
   - Protocol and Status Code
 
+      #+cindex:1XX status
     - 1XX - information only
 
+      #+cindex:2XX status
     - 2XX - Sucess
 
+      #+cindex:3XX status
     - 3XX - Client redirect
 
+      #+cindex:4XX status
     - 4XX - Client error
 
+      #+cindex:5XX status
     - 5XX - Server error
 
   - Most common status codes
 
+      #+cindex:200 OK status
+      #+cindex:OK, 200
     - 200 OK - request succeeded, resulting resource will be included in
       message body
 
+      #+cindex:404 NOT FOUND
+      #+cindex:NOT FOUND, 404
     - 404 NOT FOUND - requested resource does not exist
 
+      #+cindex:500 SERVER ERROR
+      #+cindex:SERVER ERROR, 500
     - 500 SERVER ERROR - Error on the server side in processing request
 
+    #+cindex:header information
   - Header Information re: response and server
 
   - Blank line
 
+    #+cindex:response body
+    #+cindex:body, response
   - Response Body - resource that was requested
+
+    #+cindex:example HTTP response
+  - Response Example
 
     #+begin_example
     HTTP/1.1 200 OK			# RESPONSE LINE
@@ -352,35 +381,44 @@ CSS.
 					# Mandatory blank line
     <!DOCTYPE html><html><head>...	# RESPONSE BODY (Resource)
     #+end_example
+
 ** Introduction to HTML
+#+cindex:Hyptertext Markup Language (HTML)
+#+cindex:HTML
 - Hypertext Markup Language ::
 
      standard used to describe format and structure with which content should
      be displayed on a web page
 
+  #+cindex:Elements
 - Elements ::
 
               Document contains elements
 
+  #+cindex:Tag
 - Tag ::
 
       Each element generally includes a start tag, some content, and an end
       configuration, arguments, etc.  Technology is Javascripttag.
 
+  #+cindex:plain text
 - Plain Text ::
 
                 HTML is a plain-text, human-readable language that is used for
                 representing content on the Web
 
+ #+cindex:structure
 - Structure ::
 
                HTML specifies how to structure the data, but not how to display
                it.
 
+  #+cindex:display
 - Display ::
 
              The browser chooses how to display the content
 
+  #+cindex:example HTML
 - Example ::
 
              #+begin_example
@@ -400,34 +438,48 @@ CSS.
 *** Important HTML Tags
 
 **** <!DOCTYPE>
+#+vindex:<!DOCTYPE>
+#+cindex:declaration, HTML5
 NOT a tag, but a DECLARATION to the web browser of what version of html the
 following document uses.  Must be the first line of a document.
 
 - =<!DOCTYPE html>= declares type HTML5
 
 **** <html>
+#+vindex:<html>
 After the declaration, HTML pages must start with the =<html>= tag.
 
+  #+cindex:root element
 - Root element :: Often referred to as the /root element/ because it can be
                   considered as the root of the tree-like structure of elements
                   in an HTML page.
 
 **** <head>
+#+vindex:<head>
 Contains information about the document (NOT the content)
 
+#+vindex:<title>
 - =<title>= :: title displayed in the browser's title bar
+  #+vindex:<link>
 - =<link>= :: used to add CSS stylesheets and icons to the page
+  #+vindex:<meta>
 - =<meta>= :: used to specify metadata like page descriptions and keywords
+  #+vindex:<script>
 - =<script>= :: used to add JavaScript code to the page
 
 **** <body>
+#+vindex:<body>
 Appears directly beneath the =<head>= element; contains all web page content
 (images, text, etc.).  Usually a single element to a document.
 
 *** How HTTP and HTML are Related
+#+cindex:request
+#+cindex:respone
 When a browser makes a request for a document(e.g., ~hello.html~), the HTML
 will be returned in the body of the response and displayed in the browser.
+
 ** Environment Setup
+#+cindex:environment
 1. Text Editor
 2. Create new text file
 3. Write HTML in text file
@@ -435,11 +487,27 @@ will be returned in the body of the response and displayed in the browser.
 5. Open local file in browser
 6. View HTML source in the browser
 
+** Basic HTML
+*** Important HTML Tags
+**** <p>
+#+vindex:<p>
+- Appears anywhere within the body to represent a paragraph of text expressing
+  a single thought.
+- Usually displayed vertical space before and after paragraph.
+
+
 * Concept Index
 :PROPERTIES:
 :unnumbered: t
 :index:    cp
 :END:
+
+* Tag Index
+:PROPERTIES:
+:unnumbered: t
+:index:    vr
+:END:
+
 * Export Settings                                                  :noexport:
 ** Texinfo Export Settings
 #+texinfo_filename:progwebjs.info
