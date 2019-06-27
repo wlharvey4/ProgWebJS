@@ -3,7 +3,7 @@
 #+title:Programming for the Web with JavaScript
 #+subtitle:PennX SD4x:
 #+subtitle: Learn how to develop dynamic, interactive, and data-driven web apps using JavaScript.
-#+date:2019-6-27 14:48
+#+date:2019-6-27 14:53
 PennX SD4x: Learn how to develop dynamic, interactive, and data-driven web apps
 using JavaScript.
 * Introduction
@@ -613,6 +613,30 @@ and =<em>=.
 #+vindex:&reg;
 #+cindex:registered symbol
 \textregistered
+
+*** HTML Formatting and Attributes
+
+**** Core Attributes---id and class
+- used to uniquely identify elements with an HTML document
+
+  #+vindex:id
+  #+cindex:id tag
+- id ::
+
+  - provides abilility to refer to a specific element
+
+  - =id= must be unique
+
+  - examples: header, footer
+
+- class ::
+
+  - provides ability to refer to subgroups of elements within html
+    documents
+
+  - does not have to be unique
+
+  - examples: comment, warning
 
 * Concept Index
 :PROPERTIES:
