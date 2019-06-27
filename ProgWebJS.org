@@ -3,7 +3,7 @@
 #+title:Programming for the Web with JavaScript
 #+subtitle:PennX SD4x:
 #+subtitle: Learn how to develop dynamic, interactive, and data-driven web apps using JavaScript.
-#+date:2019-6-27 14:15
+#+date:2019-6-27 14:48
 PennX SD4x: Learn how to develop dynamic, interactive, and data-driven web apps
 using JavaScript.
 * Introduction
@@ -494,7 +494,125 @@ will be returned in the body of the response and displayed in the browser.
 - Appears anywhere within the body to represent a paragraph of text expressing
   a single thought.
 - Usually displayed vertical space before and after paragraph.
+**** <h#>
+#+vindex:<h#>
+#+cindex:section heading tag
+- Referred to as /section heading tags/
 
+- HTML supports 6 heading tags
+
+    #+vindex:<h1>...<h6>
+  - <h1> :: used for most important titles
+
+  - <h2> :: used for next important subheader
+
+  - <h3> :: continuing less important header
+
+  - <h4> :: ...
+
+  - <h5> :: ...
+
+  - <h6> :: Lease important header
+
+- Magnitude of importance affects font size that will be displayed.
+
+- Can be used to divide content into readable subsections
+
+- Browser determines font and size depending on magnitude
+
+**** <b>
+#+vindex:<b>
+#+cindex:bold tag
+- indicates that the text should be *bold*
+
+**** <i>
+#+vindex:<i>
+#+cindex:italicized tag
+- indicates that the text should be /italicized/
+
+**** <strong>
+#+vindex:<strong>
+#+cindex:strong tag
+Similar tags are =<strong>=
+
+**** <em>
+#+vindex:<em>
+#+cindex:emphasized tag
+and =<em>=.
+
+**** <hr>
+#+vindex:<hr>
+#+cindex:horizontal rule tag
+- mark a break in content
+- represents a more serious shift in content, visually separating content by
+  placing a visible line between content
+
+**** <br>
+#+vindex:<br>
+#+cindex:break tag
+- mark a break in content
+- represents a single line break
+- inserts a blank line
+
+**** <div>
+#+vindex:<div>
+#+cindex:division tag
+- provides additional structure to web page
+  #+cindex:block-level container
+- block-level container for organized content
+- often used for:
+  - page headers / footers
+  - menu / navigation bar
+  - photo galleries
+  - ads or outside media
+
+**** <span>
+#+vindex:<span>
+#+cindex:span tag
+- inline container for organized content
+- similar to =<div>= but different in the following ways:
+  - block-level elements (=<div>=) are designed to contain larger chunks of
+    content designed to stand alone as a unit; always starts with a new line;
+  - inline-elements (=<span>=) designed to contain smaller pieces of content
+    usually within a larger block of content; does not start with a new line;
+
+**** <!-- Comments -->
+#+vindex:<!-- Comment -->
+#+cindex:comment tag
+- text in the HTML that will not be rendered in the browser
+- often used for:
+  - explaining HTML or leaving notes for other programmers
+  - temporarily removing HTML content
+*** HTML Symbols and Special Characters
+**** &nbsp;
+#+vindex:&nbsp;
+#+cindex:non-breaking space entity
+- non-breaking space; allows for extra white space betwen words
+
+**** &lt;
+#+vindex:&lt;
+#+cindex:less-than symbol
+: <
+
+**** &gt;
+#+vindex:&gt;
+#+cindex:greater-than symbol
+: >
+
+**** &amp;
+#+vindex:&amp;
+#+cindex:ampersand symbol
+: &
+
+**** &copy;
+#+vindex:@copy;
+#+cindex:copyright symbol
+: @
+
+**** &reg;
+#+vindex:&reg;
+#+cindex:registered symbol
+\textregistered
 
 * Concept Index
 :PROPERTIES:
